@@ -17,7 +17,9 @@ Step 7: Run the Server using this command
 
 API Endpoint :- http://127.0.0.1:8000/api/topup/         method :- POST  content type :- application/json
 
-Sample curl/Postman request :- {
+Dashboard Access Info :- Staff/superuser only
+
+Sample Request Body:   {
                                   "gamename": "PUBG",
                                   "game_id": "PUBG1",
                                   "product_name": "Moniter",
@@ -26,6 +28,20 @@ Sample curl/Postman request :- {
                                   "user_email": "player@example.com",
                                   "payment_status": "pending"
                                 }
+Sample curl/Postman request :- curl -X POST http://127.0.0.1:8000/api/topup/ \
+				  -H "Content-Type: application/json" \
+				  -d '{
+				        "gamename": "PUBG",
+				        "game_id": "PUBG1",
+				        "product_name": "Moniter",
+				        "product_id": 5,
+				        "product_price": 8000.00,
+				        "user_email": "player@example.com",
+				        "payment_status": "pending"
+				      }'
+
+
+
 
 
 
