@@ -1,0 +1,17 @@
+<h1>Analytics Dashboard</h1>
+
+<h2>Top 5 Most Purchased Products</h2>
+<ul>
+  {% for product in top_products %}
+    <li>{{ product.name }} - {{ product.order_count }} orders</li>
+  {% endfor %}
+</ul>
+
+<h2>Daily Revenue (Last 7 Days)</h2>
+<ul>
+  {% for day, revenue in daily_revenue %}
+    <li>{{ day }}: ₹{{ revenue }}</li>
+  {% endfor %}
+</ul>
+
+<h2>Failed Payments (This Month): {{ failed_count }}</h2>
